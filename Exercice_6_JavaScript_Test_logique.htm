@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <title>Utilisation d'un test logique</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <script type="text/javascript">
+      
+      var tab = new Array(-2, 1, 4);
+      
+      function soustrait(x)
+      {
+          var calcul = x - 2;
+          if(calcul >= 0)
+              {
+                  return calcul;
+              }
+          else
+          {
+              return "Nombre négatif!";
+          }
+      }
+      
+      function affiche()
+      {
+          var calcul1 = soustrait(tab[(tab.length)-3]);
+          var calcul2 = soustrait(tab[(tab.length) - 1]);
+          alert(calcul1);
+          alert(calcul2);
+      }
+      
+  </script>
+</head>
+<body>
+
+<h1>Utilisation d'un test logique</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="affiche()">Lancer la fonction</button></p>
+
+
+
+</body></html>

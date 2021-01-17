@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <title>Formulaires</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <script type="text/javascript">
+      
+      function formulaire()
+      {
+        var list = document.getElementById('sexe');
+        var x = document.getElementById('donnees');
+          
+        var text = "";
+        text = x.elements["nom"].value +" " + x.elements["prenom"].value +" " + x.elements["telephone"].value +" " + x.elements["age"].value +" " + x.elements["mail"].value;
+        
+        alert(list.options[list.selectedIndex].innerHTML)  
+        alert(text);
+
+      }
+  </script>
+</head>
+<body>
+
+<h1>Formulaires</h1>
+    
+<SELECT id="sexe">
+    <OPTION>Homme
+    <OPTION>Femme
+</SELECT>
+   
+<p>Veuillez sélectionner votre sexe: </p>
+<FORM id="donnees">
+    <p>
+        <label>Votre nom</label> : <input type="text" name="nom" /> <br>
+        <label>Votre prénom</label> : <input type="text" name="prenom" /> <br>
+        <label>Votre téléphone</label> : <input type="text" name="telephone" /> <br>
+        <label>Votre âge</label> : <input type="text" name="age" /> <br>
+        <label>Votre mail</label> : <input type="text" name="mail" /> <br>
+    </p>
+</FORM>
+
+<p>Cliquez sur le bouton pour valider&nbsp;: <button onclick="formulaire()">Valider</button></p>
+        
+
+        
+</body>
+</html> 

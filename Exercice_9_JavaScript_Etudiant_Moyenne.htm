@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <title>NotesMoyenne</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <script type="text/javascript">
+      
+      var tab = new Array();
+      
+      function insererNote()
+      {                   
+        tab.push(prompt("Insérez la note: "));
+          
+        alert(tab);
+      }
+      
+      function calculMoyenne()
+      {
+          var nbelements;
+          var i;
+          var total = 0;
+          var resultat = 0;
+          
+          nbelements = tab.length;
+
+          for(i=0; i < nbelements; i++)
+              {
+                  total = total + parseFloat(tab[i]); // il faut préciser que le type des éléments du tableau sont des flottants, sinon bug.
+              }
+
+          resultat = total / nbelements;
+          
+          alert(resultat);
+          
+          
+      }
+  </script>
+</head>
+<body>
+
+<h1>Variables non locales</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="insererNote()">Insérer une note</button></p>
+    
+    <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="calculMoyenne()">Calculer la moyenne</button></p>
+
+
+
+</body>
+</html> 

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <body>
+        <title>Formulaires</title>
+       
+        <link rel="stylesheet" href="Exercice_11_JavaScript_CALONNE.css" />
+        
+        <script type="text/javascript">   
+            
+            var entrees = {Pateencroute : 8, Saladedetomates : 7, Foiegras: 12};
+            var plats = {Spaghettis: 10, Lasagnes: 12, Steakfrites: 11 };
+            var desserts = {Tiramisu: 6,Glace: 4,Cafe: 7 };
+             
+            function prix()
+            {
+               var Total = 0;
+                
+                var choixentree = document.getElementById('entree');
+                var keyentree = choixentree.options[choixentree.selectedIndex].innerHTML;
+                var prixentree;
+               
+                
+                var choixplat = document.getElementById('plats');
+                var keyplat = choixplat.options[choixplat.selectedIndex].innerHTML;
+                var prixplat;
+                
+                var choixdessert = document.getElementById('desserts');
+                var keydessert = choixdessert.options[choixdessert.selectedIndex].innerHTML;
+                var prixdessert;
+                
+                Total = entrees[keyentree] + plats[keyplat] + desserts[keydessert];
+                
+                document.getElementById("resultat").innerHTML = keyentree + " = " + entrees[keyentree] + '<br>' + keyplat + " = " + plats[keyplat] + '<br>' + keydessert + " = " + desserts[keydessert] + '<br>' + "Le total est de: "+ Total + " euros." + '<br>';
+                
+            }
+            
+        </script>
+
+ <hr>
+    <h1>Composez votre menu</h1>
+    <hr>
+    
+    <p>Choisissez une entree, un plat, un dessert puis appuyez sur le bouton "Envoi".</p>
+    
+        <p class="palign"> <b>Entrees</b> <br>
+            <select id="entree">
+            <option>Pateencroute</option>
+            <option>Saladedetomates</option>
+            <option>Foiegras</option>
+            </select>
+        </p>
+        
+        <p class="palign"> <b>Plats</b> <br>
+            <select id="plats">
+            <option>Spaghettis</option>
+            <option>Lasagnes</option>
+            <option>Steakfrites</option>
+            </select>
+        </p>
+        
+        <p class="palign"> <b>Desserts</b> <br>
+            <select id="desserts">
+            <option>Tiramisu</option>
+            <option>Glace</option>
+            <option>Cafe</option>
+            </select>
+        </p>
+   
+   
+            
+    <br>
+    <button classe="bouton" onclick="prix()">Envoi</button>
+    <br><BR>
+            
+            
+   <p id="resultat"></p>
+
+        
+</body>
+</html> 

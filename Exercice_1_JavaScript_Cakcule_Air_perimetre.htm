@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <title>Écriture d'une fonction simple</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <script type="text/javascript">
+  // <!--
+      function calculAire()
+      {
+        var a=prompt("Insérez la largeur");
+        var b=prompt("Insérez la longueur");
+        alert("la surface est de" + ' ' + (a*b) + ' ' + "mètres carrés");
+      }
+      
+      function calculPerim()
+      {
+        var a=prompt("Insérez la largeur");
+        var b=prompt("Insérez la longueur"); // il serait nécessaire d'utiliser la fonction ParseInt pour convertir les variables en                                           int pour que les calculs fonctionnent directement
+        
+        alert("le périmètre est de" + ' ' + ((2*a) + (2*b)) + ' ' + "mètres");
+      }
+      
+  // -->
+  </script>
+</head>
+<body>
+
+<h1>Écriture d'une fonction simple</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction afin de calculer l'aire : <button onclick="calculAire()">Aire</button></p>
+<br>
+<p>Cliquez sur le bouton pour lancer la fonction afin de calculer le périmètre: <button onclick="calculPerim()">Périmètre</button></p>
+
+
+
+</body></html>

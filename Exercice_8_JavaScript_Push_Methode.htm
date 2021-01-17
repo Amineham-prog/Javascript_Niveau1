@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <title>PrenomTableau</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <script type="text/javascript">
+      
+      function prenomTableau()
+      {
+        var prenom
+        var nombre = prompt("Combien êtes-vous d'utilisateurs?");
+        var tab = new Array();
+                            
+        for(i = 1; i <= nombre; i++)
+        {
+            //prenom = prompt("Quel est le prénom de l'utilisateur " + i + " ?");
+            //tab.push(prenom);
+            tab.push(prompt("Quel est le prénom de l'utilisateur " + i + " ?"));
+        }
+          
+        alert(tab);
+      }
+  </script>
+</head>
+<body>
+
+<h1>Utilisation de push pour insérer des string dans un tableau</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="prenomTableau()">Lancer la fonction</button></p>
+
+
+
+</body>
+</html> 
